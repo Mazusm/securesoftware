@@ -1,0 +1,19 @@
+<h1>Trip Request</h1>
+<form method="post">
+    Name: <input name="name1"><br>
+    Email: <input name="email1"><br>
+    Car type: <input name="cartype"><br>
+    Destination location:
+    <select id="destinationSelect" name="destination">
+    <option value="alwakra">AlWakra</option>
+    <option value="lusail">Lusail</option>
+    <option value="doha">doha</option>
+    <option value="algharaffa">AlGharaffa</option>
+    <option value="education">Education City</option>
+    <option value="alsadd">AlSadd</option>
+  </select><br><br>
+    Description (any notes for the driver):
+    <textarea name="description1"></textarea><br>
+    <input style="display: none;" name="OTtoken" value="{{CSRFToken}}">
+    <input type="submit">
+</form>

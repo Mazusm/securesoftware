@@ -1,0 +1,9 @@
+<h1>New Account Registration</h1>
+<form method="post">
+    Name: <input name="name"><br>
+    Email: <input name="email"><br>
+    Description (why you want to attend this event):
+    <textarea name="description"></textarea><br>
+    <input style="display: none;" name="OTtoken" value="{{CSRFToken}}">
+    <input type="submit">
+</form>

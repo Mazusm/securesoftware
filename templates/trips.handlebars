@@ -1,0 +1,20 @@
+<h1>view trips</h1>
+{{#each applications}}
+<h2>Application</h2>
+Name: {{this.name}}<br>
+Email: {{this.email}}<br>
+Approved: 
+{{#if this.approved}}
+Yes
+{{else}}
+No
+{{/if}}
+<br>
+Reasons:<br>
+{{{this.description}}}<br>
+<form action="/approve" method="post">
+    <input type="hidden" name="email" value="{{this.email}}">
+    <input type="hidden" name="antiCSRFtoken" value="{{../csrfToken}}">
+    <input type="submit" value="Add to Approved">
+</form>
+{{/each}}
